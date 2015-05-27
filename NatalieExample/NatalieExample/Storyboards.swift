@@ -61,6 +61,10 @@ public func ==<T: SegueProtocol, U: SegueProtocol>(lhs: T, rhs: U) -> Bool {
    return lhs.identifier == rhs.identifier
 }
 
+public func ~=<T: SegueProtocol, U: SegueProtocol>(lhs: T, rhs: U) -> Bool {
+   return lhs.identifier == rhs.identifier
+}
+
 //MARK: - UIViewController extension
 extension UIViewController {
     func performSegue<T: SegueProtocol>(segue: T, sender: AnyObject?) {

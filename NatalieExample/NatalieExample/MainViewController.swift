@@ -23,29 +23,29 @@ class MainViewController: UIViewController {
     //MARK: Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let selection = segue.selection() {
-            switch (selection) {
-            case MainViewController.Segue.ScreenOneSegue:
-                if let oneViewController = segue.destinationViewController as? ScreenOneViewController {
-                    oneViewController.view.backgroundColor = UIColor.yellowColor()
-                }
-                break
-            case MainViewController.Segue.ScreenOneSegueButton:
-                if let oneViewController = segue.destinationViewController as? ScreenOneViewController {
-                    oneViewController.view.backgroundColor = UIColor.brownColor()
-                }
-                break
-            case MainViewController.Segue.ScreenTwoSegue:
-                if let twoViewController = segue.destinationViewController as? ScreenTwoViewController {
-                    twoViewController.view.backgroundColor = UIColor.magentaColor()
-                }
-                break
-            case MainViewController.Segue.SceneOneGestureRecognizerSegue:
-                if let oneViewController = segue.destinationViewController as? ScreenOneViewController {
-                    oneViewController.view.backgroundColor = UIColor.greenColor()
-                }
-                
+        switch (segue) {
+        case MainViewController.Segue.ScreenOneSegue:
+            if let oneViewController = segue.destinationViewController as? ScreenOneViewController {
+                oneViewController.view.backgroundColor = UIColor.yellowColor()
             }
+            break
+        case MainViewController.Segue.ScreenOneSegueButton:
+            if let oneViewController = segue.destinationViewController as? ScreenOneViewController {
+                oneViewController.view.backgroundColor = UIColor.brownColor()
+            }
+            break
+        case MainViewController.Segue.ScreenTwoSegue:
+            if let twoViewController = segue.destinationViewController as? ScreenTwoViewController {
+                twoViewController.view.backgroundColor = UIColor.magentaColor()
+            }
+            break
+        case MainViewController.Segue.SceneOneGestureRecognizerSegue:
+            if let oneViewController = segue.destinationViewController as? ScreenOneViewController {
+                oneViewController.view.backgroundColor = UIColor.greenColor()
+            }
+            break
+        default:
+            break
         }
     }
 
